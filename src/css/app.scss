@@ -1,0 +1,185 @@
+// app global css in SCSS form
+@font-face {
+  font-family: MontserratRegular;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: MontserratThin;
+  src: url(./fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: MontserratBold;
+  src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+// declare a class which applies it
+.fontRegular {
+  font-family: 'MontserratRegular';
+}
+.fontThin {
+  font-family: 'MontserratThin';
+}
+.fontBold {
+  font-family: 'MontserratBold';
+}
+
+body{
+  font-family: 'MontserratRegular';
+}
+
+h1, h2, h3, h4, a{
+  color: $primary;
+  font-family: 'MontserratBold';
+
+}
+h3{
+  @media screen and (max-width: 425px){
+    font-size: 2.3em;
+    line-height: 1.2em;
+  }
+}
+h4{
+  @media screen and (max-width: 425px){
+    font-size: 1.8em;
+    line-height: 1.0em;
+  }
+}
+.maxWidth-90-950{
+  width: 90vw;
+  max-width: 950px;
+}
+.maxWidth-50-500{
+  width: 50vw;
+  max-width: 500px;
+}
+.q-stepper--horizontal .q-stepper__step-inner, .q-stepper--horizontal > .q-stepper__nav{
+  padding: 0;
+}
+.tooltipTip{
+  overflow: visible;
+  &:after{
+    content: "asdasd";
+    position: absolute;
+    top: 5%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $grey-8 transparent transparent;
+  }
+}
+.full-view-height{
+  height: max-content;
+  min-height: 100vh;
+  padding-bottom: 20vh;
+}
+.bg-light{
+  background-color: white;
+}
+.bg-dark{
+  background-color: $primary;
+}
+.bg-voucher{
+  background: linear-gradient(0deg, #494949, #494949, #3e3d3d, #383838)
+}
+.bg-voucherBox{
+  background-color: #494949;
+}
+.bg-dark-img{
+  background-color: $primary;
+  background-image: url('../assets/bg-head-energyhouse-small.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  background-blend-mode: overlay;
+}
+.bg-light-img{
+  background-image: url(../assets/bg-siccro-landscape.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.roundCorner{
+  border-radius: 5px;
+  @media screen and (min-width: 425px){
+    border-radius: 13px;
+  }
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.transparent-8{
+  opacity: .8;
+}
+.text-glow-accent{
+  text-shadow: 0 0 10px $accent;
+}
+.submitBtn{
+  width: 80%;
+  height: 80px;
+  font-size: 1.6em;
+  border-radius: 0;
+  transition: all .3s ease-in-out;
+
+  @media screen and (max-width: 425px){
+    font-size: 1.1em;
+  }
+}
+
+.rotateIcon{
+  cursor: pointer;
+  transition: transform .2s ease-in-out;
+
+  &:hover{
+    transform: rotate(180deg);
+  }
+}
+.glow-accent{
+  box-shadow: 0 0 28px -6px $accent;
+}
+.glow-accent-hover:hover{
+  box-shadow: 0 0 20px 0px $accent;
+}
+.glow-accent-focus:focus{
+  box-shadow: 0 0 16px 1px $accent;
+}
+.colMed4{
+  height: auto;
+  width: 100%;
+
+  @media (min-width: 768px){
+    height: auto;
+    width: 33.333%;
+  }
+}
+.colMed6{
+  height: auto;
+  width: 100%;
+
+  @media (min-width: 768px){
+    width: 50%;
+  }
+}
+.col12{
+  height: auto;
+  width: 100%;
+}
+.voucherPosition{
+  top: 70px;
+  max-width: 600px;
+  z-index: 100;
+  @media screen and (max-width: 375px){
+    top: 90px
+  }
+}
+.voucherContentPosition{
+  margin-top: -6px;
+  padding-top: 150px;
+  @media screen and (max-width: 425px){
+    padding-top: 100px
+  }
+  @media screen and (max-width: 375px){
+    padding-top: 30px
+  }
+}
